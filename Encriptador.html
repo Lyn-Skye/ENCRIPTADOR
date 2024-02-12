@@ -7,7 +7,9 @@
         <title>Encriptador</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="styles-encriptador.css">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -15,23 +17,20 @@
             <h1> <img src="Imagenes/Logo.png" alt="Logo de Alura"></h1>
         </header>
 
-        <div>
+        <div class="captura-texto">
             <textarea id="input" wrap="soft" rows="10">Ingrese el texto aquí</textarea>
-
         </div>
 
-        <div>
-            <textarea id="output" wrap="soft" rows="10">
-                <h2> <img src="Imagenes/Muñeco.png" alt="Niño con lupa"> </h2>
-                <p>Ningún mensaje fue encontrado</p>
-                <p>Ingresa el texto que desees encriptar o desencriptar</p>
-            </textarea>
-        </div>
+        <section class="recuadro">  
+            <h2> <img src="Imagenes/Muñeco.png"> </h2>
+            <p1>Ningún mensaje fue encontrado</p>
+            <p2>Ingresa el texto que desees encriptar o desencriptar</p>
+        </section>
 
         <section>
-            <input id="botón-encriptar"  type="submit" value="Encriptar" class="enviar">
+            <input type="submit" value="Encriptar" class="botones">
 
-            <input id="botón-desencriptar" type="submit" value="Desencriptar" class="enviar">
+            <input type="submit" value="Desencriptar" class="botones">
         </section>
 
 
