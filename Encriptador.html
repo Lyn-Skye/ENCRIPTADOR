@@ -7,7 +7,6 @@
         <title>Encriptador</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="styles-encriptador.css">
-        <script src="Encriptador.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -19,7 +18,8 @@
         </header>
 
         <section>
-            <textarea id="input" wrap="soft" rows="8">Ingrese el texto aquí</textarea>
+            <textarea id="input" wrap="soft" rows="8" placeholder="Ingrese el texto aquí"></textarea>
+            
         </section>
 
         <section class="recuadro"> </section>
@@ -28,7 +28,7 @@
         <p2>Ingresa el texto que desees encriptar o desencriptar</p2>
 
         <section>
-            <button onclick="encriptar();" class="botones" id="boton-encriptar">Encriptar</button>
+            <button onclick="boton_encriptar();" class="botones" id="boton-encriptar">Encriptar</button>
 
             <button onclick="desencriptar();" class="botones" id="boton-desencriptar">Desencriptar</button>
 
@@ -42,6 +42,8 @@
 
         <footer>
             <p>Hecho por Hilda Julieta Lacaze</p> 
-        </footer>        
+        </footer> 
+        
+        <script src="Encriptador.js"></script>
     </body>
 </html>

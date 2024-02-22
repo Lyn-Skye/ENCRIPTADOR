@@ -1,9 +1,40 @@
+const input=document.querySelector("#input");
 
-function limpiarCaja() {
-    document.querySelector('#valorUsuario').value = '';
+const matriz_code= [
+  ["e", "enter"], //indice 0
+  ["i", "imes"], //indice 1
+  ["a", "ai"], //indice 2
+  ["o", "ober"], //indice 3
+  ["u", "ufat"], //indice 4
+]
+
+function boton_encriptar(){
+  const texto = encriptar(input.value);
+  console.log(texto); 
 }
 
+function encriptar(fraseEncriptada){
+  for(let i=0; i<matriz_code.length; i++){
+    if(fraseEncriptada.includes(matriz_code[i][0])){
+      fraseEncriptada = fraseEncriptada.replaceAll(
+        matriz_code[i][0],
+        matriz_code[i][1]
+      );
+    }
+  }
+  return fraseEncriptada;
+}
+
+
+
+
 /*
+function limpiarCaja() {
+    document.querySelector('#input').value ='';
+}
+
+
+
 var textarea = document.getElementById("my-button");
 button.addEventListener("click", changeColor);
 
