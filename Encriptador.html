@@ -7,6 +7,7 @@
         <title>Encriptador</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="styles-encriptador.css">
+        <script src="Encriptador.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -17,27 +18,30 @@
             <h1> <img src="Imagenes/Logo.png" alt="Logo de Alura"></h1>
         </header>
 
-        <div class="captura-texto">
-            <textarea id="input" wrap="soft" rows="10">Ingrese el texto aquí</textarea>
-        </div>
-
-        <section class="recuadro">  
-            <h2> <img src="Imagenes/Muñeco.png"> </h2>
-            <p1>Ningún mensaje fue encontrado</p>
-            <p2>Ingresa el texto que desees encriptar o desencriptar</p>
+        <section>
+            <textarea id="input" wrap="soft" rows="8">Ingrese el texto aquí</textarea>
         </section>
+
+        <section class="recuadro"> </section>
+        <h2 id="muñeco"> <img src="Imagenes/Muñeco.png"> </h2>
+        <p1>Ningún mensaje fue encontrado</p1>
+        <p2>Ingresa el texto que desees encriptar o desencriptar</p2>
 
         <section>
-            <input type="submit" value="Encriptar" class="botones">
+            <button onclick="encriptar();" class="botones" id="boton-encriptar">Encriptar</button>
 
-            <input type="submit" value="Desencriptar" class="botones">
+            <button onclick="desencriptar();" class="botones" id="boton-desencriptar">Desencriptar</button>
+
+            <button onclick="copiar();" class="botones" id="boton-copiar">Copiar</button>
         </section>
 
-
+        <p3>  
+            <img src="Imagenes/Vector.png" alt="Símbolo de alerta"> Solo letras minúsculas y sin acentos 
+        </p3>
 
 
         <footer>
-            <p> Hecho por Hilda Julieta Lacaze</p> 
+            <p>Hecho por Hilda Julieta Lacaze</p> 
         </footer>        
     </body>
 </html>
