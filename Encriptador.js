@@ -25,7 +25,27 @@ function encriptar(fraseEncriptada){
   return fraseEncriptada;
 }
 
+function boton_desencriptar(){
+  const texto = desencriptar(input.value);
+  console.log(texto); 
+}
 
+function desencriptar(fraseDesencriptada){
+  for(let i=0; i<matriz_code.length; i++){
+    if(fraseDesencriptada.includes(matriz_code[i][0])){
+      fraseDesencriptada = fraseDesencriptada.replaceAll(
+        matriz_code[i][1],
+        matriz_code[i][0]
+      );
+    }
+  }
+  return fraseDesencriptada;
+}
+
+function boton_copiar(){
+  const texto = desencriptar(input.value);
+  console.log(texto); 
+}
 
 
 /*

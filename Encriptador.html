@@ -19,20 +19,32 @@
 
         <section>
             <textarea id="input" wrap="soft" rows="8" placeholder="Ingrese el texto aquí"></textarea>
-            
+            <textarea id="output" wrap="soft" rows="33"></textarea>
         </section>
 
         <section class="recuadro"> </section>
-        <h2 id="muñeco"> <img src="Imagenes/Muñeco.png"> </h2>
-        <p1>Ningún mensaje fue encontrado</p1>
-        <p2>Ingresa el texto que desees encriptar o desencriptar</p2>
+
+        <section id="desaparece"> 
+            <h2 id="muñeco"> <img src="Imagenes/Muñeco.png"> </h2>
+            <p1>Ningún mensaje fue<br>encontrado</p1>
+            <p2>Ingresa el texto que desees encriptar o<br>desencriptar</p2>
+        </section>
+
+        <script> //para desaparece muñeco y aparecer boton de copiar
+            function desaparece(){
+                document.getElementById("desaparece").style.display = "none";
+            }
+            function aparece(){
+                document.getElementById("boton-copiar").style.display = "inline";
+            }
+        </script>
 
         <section>
-            <button onclick="boton_encriptar();" class="botones" id="boton-encriptar">Encriptar</button>
+            <button onclick="boton_encriptar(),desaparece(),aparece()"; class="botones" id="boton-encriptar">Encriptar</button>
 
-            <button onclick="desencriptar();" class="botones" id="boton-desencriptar">Desencriptar</button>
+            <button onclick="boton_desencriptar(),desaparece(),aparece()"; class="botones" id="boton-desencriptar">Desencriptar</button>
 
-            <button onclick="copiar();" class="botones" id="boton-copiar">Copiar</button>
+            <button style="display:none;" onclick="boton_copiar();" class="botones" id="boton-copiar">Copiar</button>
         </section>
 
         <p3>  

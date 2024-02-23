@@ -38,7 +38,7 @@ body{
 .recuadro{
   /*Características del recuadro*/
   position: absolute;
-  width: 400px;
+  width: 26%;
   height: 90%;
   right: 5%;
   background: white;
@@ -46,11 +46,26 @@ body{
   border-radius: 30px;
 }
 
+#output{
+  display: inline;
+  position: absolute;
+  top:10%;
+  right: 5%;
+  width: 25%;
+  height: 70%;
+  font-size: 24px;
+  line-height: 36px;
+  background-color: #FFFFFF;
+  border: none;
+  resize: none;
+  color:#495057;
+}
+
 #muñeco{
   position: absolute;
   width: 336px;
   height: 304px;
-  top: 25%;
+  top: 20%;
   right: 7%;
 }
 
@@ -63,8 +78,8 @@ p1{
   line-height: 29px;
   letter-spacing: 0em;
   text-align: center;
-  right: 5.5%;
-  bottom: 25%;
+  right: 10%;
+  bottom: 27%;
 }
 
 p2{
@@ -76,8 +91,8 @@ p2{
   line-height: 24px;
   letter-spacing: 0em;
   text-align: center;
-  right: 5.3%;
-  bottom: 20%;
+  right: 8%;
+  bottom: 19%;
 }
 
 p3{
