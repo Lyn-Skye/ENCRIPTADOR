@@ -3,7 +3,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">  <!--para adaptar a celulares-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--para adaptar a celulares-->
         <title>Encriptador</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="styles-encriptador.css">
@@ -13,33 +13,25 @@
     </head>
 
     <body>
-        <header>
+        <header> <!-- El logo -->
             <h1> <img src="Imagenes/Logo.png" alt="Logo de Alura"></h1>
         </header>
 
-        <section>
-            <textarea id="input" wrap="soft" rows="8" placeholder="Ingrese el texto aquí"></textarea>
-            <textarea id="output" wrap="soft" rows="33"></textarea>
+        <section> <!--área de texto de entrada-->
+            <textarea id="input" wrap="soft" rows="8" placeholder="Ingrese el texto aquí"></textarea>   
         </section>
 
-        <section class="recuadro"> </section>
+        <div class="recuadro">        <!---Área de texto de salida-->  
+            <textarea id="output" style="display:none;" wrap="soft" rows="8"></textarea>  
+        </div>
 
-        <section id="desaparece"> 
+        <section id="desaparece"> <!-- las áreas que desaparecen-->
             <h2 id="muñeco"> <img src="Imagenes/Muñeco.png"> </h2>
             <p1>Ningún mensaje fue<br>encontrado</p1>
             <p2>Ingresa el texto que desees encriptar o<br>desencriptar</p2>
         </section>
 
-        <script> //para desaparece muñeco y aparecer boton de copiar
-            function desaparece(){
-                document.getElementById("desaparece").style.display = "none";
-            }
-            function aparece(){
-                document.getElementById("boton-copiar").style.display = "inline";
-            }
-        </script>
-
-        <section>
+        <section> <!-- Sección de botones-->
             <button onclick="boton_encriptar(),desaparece(),aparece()"; class="botones" id="boton-encriptar">Encriptar</button>
 
             <button onclick="boton_desencriptar(),desaparece(),aparece()"; class="botones" id="boton-desencriptar">Desencriptar</button>
@@ -47,12 +39,12 @@
             <button style="display:none;" onclick="boton_copiar();" class="botones" id="boton-copiar">Copiar</button>
         </section>
 
-        <p3>  
+        <p3>   <!--para poner el símbolo de alerta y las restricciones de uso-->
             <img src="Imagenes/Vector.png" alt="Símbolo de alerta"> Solo letras minúsculas y sin acentos 
         </p3>
 
 
-        <footer>
+        <footer> <!-- Quien lo hizo-->
             <p>Hecho por Hilda Julieta Lacaze</p> 
         </footer> 
         

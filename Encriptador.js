@@ -8,15 +8,15 @@ const matriz_code= [
   ["u", "ufat"], //indice 4
 ]
 
-function boton_encriptar(){
-  const texto = encriptar(input.value);
-  console.log(texto); 
+function boton_encriptar(){  
+  const texto = encriptar(input.value);  //para que la constante texto cache el valor resultado de la funcion encriptar enviando valor de input
+  document.getElementById("output").innerHTML=texto;  //para mandar el valor texto a un área del html
 }
 
 function encriptar(fraseEncriptada){
   for(let i=0; i<matriz_code.length; i++){
     if(fraseEncriptada.includes(matriz_code[i][0])){
-      fraseEncriptada = fraseEncriptada.replaceAll(
+        fraseEncriptada = fraseEncriptada.replaceAll(
         matriz_code[i][0],
         matriz_code[i][1]
       );
@@ -27,7 +27,7 @@ function encriptar(fraseEncriptada){
 
 function boton_desencriptar(){
   const texto = desencriptar(input.value);
-  console.log(texto); 
+  document.getElementById("output").innerHTML=texto;
 }
 
 function desencriptar(fraseDesencriptada){
@@ -42,40 +42,18 @@ function desencriptar(fraseDesencriptada){
   return fraseDesencriptada;
 }
 
-function boton_copiar(){
-  const texto = desencriptar(input.value);
-  console.log(texto); 
+function boton_copiar(){ //la función para copiar el contenido de la caja de texto
+  var text=document.getElementById("output");
+  text.select();
+  document.execCommand("copy");
 }
 
-
-/*
-function limpiarCaja() {
-    document.querySelector('#input').value ='';
+function desaparece(){ //desaparecer los elementos al picar el boton desencriptar ó encriptar
+  document.getElementById("desaparece").style.display = "none";
+  return;
 }
 
-
-
-var textarea = document.getElementById("my-button");
-button.addEventListener("click", changeColor);
-
-function changeColor() {
-  document.getElementById("my-div").style.backgroundColor = "green";
+function aparece(){ //aparece el botón de copiar
+  document.getElementById("boton-copiar").style.display = "inline";
+  document.getElementById("output").style.display = "inline";
 }
-
-
-
-function swap(str) {
-    var texto = ''
-    var string;
-    for (i = 0; i <= str.length - 1; i++) {
-      string = str[i];  
-      if (str[i] == string.toUpperCase()) {
-        texto += string.toLowerCase();
-      } else {
-        texto += string.toUpperCase();
-      }
-    }
-    return texto;
-  }
-  
-  console.log(swap('PeTeR')); */

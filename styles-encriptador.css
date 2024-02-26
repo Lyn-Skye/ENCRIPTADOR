@@ -15,7 +15,6 @@ body{
 }
 
 #input{
-  display: inline;
   position: absolute;
   left: 15%;
   top: 18%;
@@ -49,10 +48,10 @@ body{
 #output{
   display: inline;
   position: absolute;
-  top:10%;
+  top:3%;
   right: 5%;
-  width: 25%;
-  height: 70%;
+  width: 90%;
+  height: 80%;
   font-size: 24px;
   line-height: 36px;
   background-color: #FFFFFF;
