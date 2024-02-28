@@ -6,10 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--para adaptar a celulares-->
         <title>Encriptador</title>
         <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="styles-encriptador.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles-encriptador.css">  
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     </head>
 
     <body>
@@ -17,37 +16,34 @@
             <h1> <img src="Imagenes/Logo.png" alt="Logo de Alura"></h1>
         </header>
 
-        <section> <!--área de texto de entrada-->
-            <textarea id="input" wrap="soft" rows="8" placeholder="Ingrese el texto aquí"></textarea>   
-        </section>
+        <div>
+            <article> <!--área de texto de entrada-->
+                <textarea id="input" wrap="soft" rows="8" placeholder="Ingrese el texto aquí"></textarea>
+                <p1><img src="Imagenes/Vector.png" alt="Símbolo de alerta"> Solo letras minúsculas y sin acentos</p1> <!--para poner el símbolo de alerta y las restricciones de uso-->
+            </article>
 
-        <div class="recuadro">        <!---Área de texto de salida-->  
-            <textarea id="output" style="display:none;" wrap="soft" rows="8"></textarea>  
+            <section> <!-- Sección de botones-->
+                <button onclick="boton_encriptar(),aparece(),desaparece()"; class="botones" id="boton-encriptar">Encriptar</button>
+                <button onclick="boton_desencriptar(),aparece(),desaparece()"; class="botones" id="boton-desencriptar">Desencriptar</button>
+            </section>
         </div>
 
-        <section id="desaparece"> <!-- las áreas que desaparecen-->
-            <h2 id="muñeco"> <img src="Imagenes/Muñeco.png"> </h2>
-            <p1>Ningún mensaje fue<br>encontrado</p1>
-            <p2>Ingresa el texto que desees encriptar o<br>desencriptar</p2>
-        </section>
+        <div class="recuadro"> <!---Área de texto de salida-->            
+            <textarea style="display:none" id="output" wrap="soft" rows="8"></textarea>    
+            <div id="desaparece"><!-- las áreas que desaparecen-->
+                <h2 id="muñeco"> <img src="Imagenes/Muñeco.png"> </h2>
+                <p2><br>Ningún mensaje fue encontrado</p2>
+                <p3><br><br>Ingresa el texto que desees encriptar o desencriptar</p3>
+            </div> 
+            <br>
+            <div><button style="display:none" onclick="boton_copiar()"; class="botones" id="boton-copiar">Copiar</button></div>
+            <br>
+        </div>  
 
-        <section> <!-- Sección de botones-->
-            <button onclick="boton_encriptar(),desaparece(),aparece()"; class="botones" id="boton-encriptar">Encriptar</button>
-
-            <button onclick="boton_desencriptar(),desaparece(),aparece()"; class="botones" id="boton-desencriptar">Desencriptar</button>
-
-            <button style="display:none;" onclick="boton_copiar();" class="botones" id="boton-copiar">Copiar</button>
-        </section>
-
-        <p3>   <!--para poner el símbolo de alerta y las restricciones de uso-->
-            <img src="Imagenes/Vector.png" alt="Símbolo de alerta"> Solo letras minúsculas y sin acentos 
-        </p3>
-
-
-        <footer> <!-- Quien lo hizo-->
-            <p>Hecho por Hilda Julieta Lacaze</p> 
-        </footer> 
-        
-        <script src="Encriptador.js"></script>
+        <footer>
+            Hecho por:Hilda Lacaze
+        </footer>
+       
     </body>
+    <script src="Encriptador.js"></script>
 </html>
