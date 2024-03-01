@@ -11,7 +11,6 @@ const matriz_code= [
 function boton_encriptar(){  
   const texto = encriptar(input.value);  //para que la constante texto cache el valor resultado de la funcion encriptar enviando valor de input
   document.getElementById("output").innerHTML=texto;  //para mandar el valor texto a un área del html
-  console.log(texto);
 }
 
 function encriptar(fraseEncriptada){
@@ -29,7 +28,6 @@ function encriptar(fraseEncriptada){
 function boton_desencriptar(){
   const texto = desencriptar(input.value);
   document.getElementById("output").innerHTML=texto;
-  console.log(texto);
 }
 
 function desencriptar(fraseDesencriptada){
